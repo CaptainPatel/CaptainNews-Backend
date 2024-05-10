@@ -1,14 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-require('dotenv').config()
+require('dotenv').config();
 app.use(cors({
     origin: 'http://localhost:5173'
 }));
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI(process.env.API_KEY);
-
-
 
 app.get("/getNews/:tag?", async (req, res) => {
     try {
