@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 require('dotenv').config();
 app.use(cors({
-    origin: 'https://news-app-captain-patel.onrender.com/'
+    origin: 'https://news-app-captain-patel.onrender.com'
 }));
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI(process.env.API_KEY);
